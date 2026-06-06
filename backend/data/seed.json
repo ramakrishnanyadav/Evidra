@@ -1,0 +1,747 @@
+[
+  {
+    "id": "11111111-1111-1111-1111-111111111111",
+    "name": "Arjun Sharma",
+    "github_username": "arjun-oss",
+    "recommendation": "review",
+    "resume_text": "Junior Frontend Developer. Skilled in React, CSS, HTML.",
+    "extracted_skills": [
+      {
+        "skill_name": "Skill 0",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 1",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 2",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 3",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 4",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 5",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 6",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 7",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 8",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 9",
+        "confidence": "high",
+        "verified": true
+      }
+    ],
+    "hidden_strengths": [
+      {
+        "domain": "Backend Systems",
+        "description": "Consistent backend engineering activity",
+        "evidence_repos": [
+          "api-gateway"
+        ],
+        "commit_count": 145,
+        "confidence": "high"
+      }
+    ],
+    "github_signals": {
+      "readme_depth": "medium"
+    },
+    "reasoning": {
+      "recommendation": "shortlist",
+      "top_strengths": [
+        {
+          "point": "Backend capability significantly exceeds resume representation",
+          "evidence": "145 commits across 2 backend repositories"
+        },
+        {
+          "point": "Consistent contribution patterns over 14 months",
+          "evidence": "github.com/arjun-oss"
+        }
+      ],
+      "concerns": [
+        {
+          "point": "Resume does not reflect actual technical depth",
+          "evidence": "Resume lists only frontend skills"
+        }
+      ],
+      "missing_information": [
+        "No system design samples available",
+        "No code review history"
+      ],
+      "confidence_band": "high",
+      "narrative": "Resume describes a frontend developer. GitHub reveals a backend engineer. Hidden capability in distributed systems and API architecture confirmed across multiple production-grade repositories."
+    },
+    "authenticity_index": {
+      "commit_consistency_score": "high",
+      "readme_quality_score": "medium",
+      "original_repo_ratio": 0.8,
+      "has_issue_participation": true,
+      "signal_note": "Default"
+    },
+    "created_at": "2026-06-02T02:19:27.728908",
+    "processing_status": "completed",
+    "organization_id": "00000000-0000-0000-0000-000000000001",
+    "job_id": "00000000-0000-0000-0000-000000000001",
+    "education": [
+      {
+        "institution": "Mumbai University",
+        "degree": "Bachelor of Engineering",
+        "field_of_study": "Computer Science",
+        "graduation_year": 2021,
+        "verified": false
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Dev",
+        "duration_months": 26
+      }
+    ]
+  },
+  {
+    "id": "5dd6415e-e8ed-431e-9cbe-6509fdde1a19",
+    "name": "Sarah Connor",
+    "github_username": null,
+    "recommendation": "review",
+    "resume_text": "Experienced Project Manager and Scrum Master.",
+    "extracted_skills": [
+      {
+        "skill_name": "Skill 0",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 1",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 2",
+        "confidence": "high",
+        "verified": true
+      }
+    ],
+    "hidden_strengths": [],
+    "github_signals": null,
+    "reasoning": {
+      "recommendation": "review",
+      "top_strengths": [
+        {
+          "point": "Strong management skills",
+          "evidence": "Resume"
+        }
+      ],
+      "concerns": [],
+      "missing_information": [
+        "No technical evidence"
+      ],
+      "confidence_band": "medium",
+      "narrative": "Strong resume profile but lacks verifiable technical signals."
+    },
+    "created_at": "2026-06-02T02:19:27.729019",
+    "processing_status": "completed",
+    "organization_id": "00000000-0000-0000-0000-000000000001",
+    "job_id": "00000000-0000-0000-0000-000000000001",
+    "education": [
+      {
+        "institution": "Tech University",
+        "degree": "Bachelor of Science",
+        "field_of_study": "Computer Science",
+        "graduation_year": 2018,
+        "verified": false
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Dev",
+        "duration_months": 12
+      }
+    ],
+    "authenticity_index": {
+      "commit_consistency_score": "medium",
+      "readme_quality_score": "low",
+      "original_repo_ratio": 0.5,
+      "has_issue_participation": false,
+      "signal_note": "analysis pending"
+    }
+  },
+  {
+    "id": "eae6f9bd-eb6c-4f8f-b59a-4c440061e1f1",
+    "name": "Priya Patel",
+    "github_username": "priya-ent",
+    "recommendation": "shortlist",
+    "resume_text": "Senior Enterprise Architect with 10 years experience in Java and Spring Boot.",
+    "extracted_skills": [
+      {
+        "skill_name": "Skill 0",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 1",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 2",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 3",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 4",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 5",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 6",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 7",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 8",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 9",
+        "confidence": "high",
+        "verified": true
+      }
+    ],
+    "hidden_strengths": [],
+    "github_signals": {
+      "readme_depth": "medium"
+    },
+    "reasoning": {
+      "recommendation": "shortlist",
+      "top_strengths": [],
+      "concerns": [],
+      "missing_information": [],
+      "confidence_band": "high",
+      "narrative": "Excellent enterprise architecture experience."
+    },
+    "authenticity_index": {
+      "commit_consistency_score": "high",
+      "readme_quality_score": "medium",
+      "original_repo_ratio": 0.8,
+      "has_issue_participation": true,
+      "signal_note": "Default"
+    },
+    "created_at": "2026-06-02T02:19:27.729162",
+    "processing_status": "completed",
+    "organization_id": "00000000-0000-0000-0000-000000000001",
+    "job_id": "00000000-0000-0000-0000-000000000001",
+    "education": [
+      {
+        "institution": "IIT Delhi",
+        "degree": "Master of Technology",
+        "field_of_study": "Computer Science",
+        "graduation_year": 2012,
+        "verified": true
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Senior",
+        "duration_months": 144
+      }
+    ]
+  },
+  {
+    "id": "8fd544fa-3dea-48ba-82a1-a38daff5e2c0",
+    "name": "Dr. David Kim",
+    "github_username": "david-research",
+    "recommendation": "shortlist",
+    "resume_text": "Research Scientist specializing in Machine Learning and Computer Vision.",
+    "extracted_skills": [
+      {
+        "skill_name": "Skill 0",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 1",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 2",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 3",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 4",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 5",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 6",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 7",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 8",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 9",
+        "confidence": "high",
+        "verified": true
+      }
+    ],
+    "hidden_strengths": [],
+    "github_signals": {
+      "readme_depth": "high"
+    },
+    "reasoning": {
+      "recommendation": "shortlist",
+      "top_strengths": [],
+      "concerns": [],
+      "missing_information": [],
+      "confidence_band": "high",
+      "narrative": "Strong research background with excellent documentation."
+    },
+    "authenticity_index": {
+      "commit_consistency_score": "high",
+      "readme_quality_score": "high",
+      "original_repo_ratio": 0.8,
+      "has_issue_participation": true,
+      "signal_note": "Default"
+    },
+    "created_at": "2026-06-02T02:19:27.729207",
+    "processing_status": "completed",
+    "organization_id": "00000000-0000-0000-0000-000000000001",
+    "job_id": "00000000-0000-0000-0000-000000000001",
+    "education": [
+      {
+        "institution": "Tech University",
+        "degree": "Bachelor of Science",
+        "field_of_study": "Computer Science",
+        "graduation_year": 2018,
+        "verified": false
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Researcher",
+        "duration_months": 60
+      }
+    ]
+  },
+  {
+    "id": "f3a17165-a7bd-40e1-81b7-4ce194e301b9",
+    "name": "Candidate 5",
+    "github_username": "user5",
+    "recommendation": "review",
+    "resume_text": "Standard resume text.",
+    "extracted_skills": [
+      {
+        "skill_name": "Skill 0",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 1",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 2",
+        "confidence": "high",
+        "verified": true
+      }
+    ],
+    "hidden_strengths": [],
+    "github_signals": null,
+    "reasoning": {
+      "recommendation": "pass",
+      "top_strengths": [],
+      "concerns": [],
+      "missing_information": [],
+      "confidence_band": "low",
+      "narrative": "Average profile."
+    },
+    "authenticity_index": {
+      "commit_consistency_score": "medium",
+      "readme_quality_score": "low",
+      "original_repo_ratio": 0.5,
+      "has_issue_participation": false,
+      "signal_note": "analysis pending"
+    },
+    "created_at": "2026-06-02T02:19:27.729220",
+    "processing_status": "completed",
+    "organization_id": "00000000-0000-0000-0000-000000000001",
+    "job_id": "00000000-0000-0000-0000-000000000001",
+    "education": [
+      {
+        "institution": "Tech University",
+        "degree": "Bachelor of Science",
+        "field_of_study": "Computer Science",
+        "graduation_year": 2018,
+        "verified": false
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Dev",
+        "duration_months": 12
+      }
+    ]
+  },
+  {
+    "id": "37d43b19-1967-40a6-ab1e-fa402a790f5c",
+    "name": "Candidate 6",
+    "github_username": "user6",
+    "recommendation": "review",
+    "resume_text": "Standard resume text.",
+    "extracted_skills": [
+      {
+        "skill_name": "Skill 0",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 1",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 2",
+        "confidence": "high",
+        "verified": true
+      }
+    ],
+    "hidden_strengths": [],
+    "github_signals": null,
+    "reasoning": {
+      "recommendation": "pass",
+      "top_strengths": [],
+      "concerns": [],
+      "missing_information": [],
+      "confidence_band": "low",
+      "narrative": "Average profile."
+    },
+    "authenticity_index": {
+      "commit_consistency_score": "medium",
+      "readme_quality_score": "low",
+      "original_repo_ratio": 0.5,
+      "has_issue_participation": false,
+      "signal_note": "analysis pending"
+    },
+    "created_at": "2026-06-02T02:19:27.729231",
+    "processing_status": "completed",
+    "organization_id": "00000000-0000-0000-0000-000000000001",
+    "job_id": "00000000-0000-0000-0000-000000000001",
+    "education": [
+      {
+        "institution": "Tech University",
+        "degree": "Bachelor of Science",
+        "field_of_study": "Computer Science",
+        "graduation_year": 2018,
+        "verified": false
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Dev",
+        "duration_months": 12
+      }
+    ]
+  },
+  {
+    "id": "6b549bf6-549d-4605-9c4b-8561ddc77cd2",
+    "name": "Candidate 7",
+    "github_username": "user7",
+    "recommendation": "review",
+    "resume_text": "Standard resume text.",
+    "extracted_skills": [
+      {
+        "skill_name": "Skill 0",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 1",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 2",
+        "confidence": "high",
+        "verified": true
+      }
+    ],
+    "hidden_strengths": [],
+    "github_signals": null,
+    "reasoning": {
+      "recommendation": "pass",
+      "top_strengths": [],
+      "concerns": [],
+      "missing_information": [],
+      "confidence_band": "low",
+      "narrative": "Average profile."
+    },
+    "authenticity_index": {
+      "commit_consistency_score": "medium",
+      "readme_quality_score": "low",
+      "original_repo_ratio": 0.5,
+      "has_issue_participation": false,
+      "signal_note": "analysis pending"
+    },
+    "created_at": "2026-06-02T02:19:27.729239",
+    "processing_status": "completed",
+    "organization_id": "00000000-0000-0000-0000-000000000001",
+    "job_id": "00000000-0000-0000-0000-000000000001",
+    "education": [
+      {
+        "institution": "Tech University",
+        "degree": "Bachelor of Science",
+        "field_of_study": "Computer Science",
+        "graduation_year": 2018,
+        "verified": false
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Dev",
+        "duration_months": 12
+      }
+    ]
+  },
+  {
+    "id": "9f7a7828-f5ed-4d19-bfec-35953b7645af",
+    "name": "Candidate 8",
+    "github_username": "user8",
+    "recommendation": "review",
+    "resume_text": "Standard resume text.",
+    "extracted_skills": [
+      {
+        "skill_name": "Skill 0",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 1",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 2",
+        "confidence": "high",
+        "verified": true
+      }
+    ],
+    "hidden_strengths": [],
+    "github_signals": null,
+    "reasoning": {
+      "recommendation": "pass",
+      "top_strengths": [],
+      "concerns": [],
+      "missing_information": [],
+      "confidence_band": "low",
+      "narrative": "Average profile."
+    },
+    "authenticity_index": {
+      "commit_consistency_score": "medium",
+      "readme_quality_score": "low",
+      "original_repo_ratio": 0.5,
+      "has_issue_participation": false,
+      "signal_note": "analysis pending"
+    },
+    "created_at": "2026-06-02T02:19:27.729250",
+    "processing_status": "completed",
+    "organization_id": "00000000-0000-0000-0000-000000000001",
+    "job_id": "00000000-0000-0000-0000-000000000001",
+    "education": [
+      {
+        "institution": "Tech University",
+        "degree": "Bachelor of Science",
+        "field_of_study": "Computer Science",
+        "graduation_year": 2018,
+        "verified": false
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Dev",
+        "duration_months": 12
+      }
+    ]
+  },
+  {
+    "id": "df5791e9-39f2-4981-98c8-38c829436b19",
+    "name": "Candidate 9",
+    "github_username": "user9",
+    "recommendation": "review",
+    "resume_text": "Standard resume text.",
+    "extracted_skills": [
+      {
+        "skill_name": "Skill 0",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 1",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 2",
+        "confidence": "high",
+        "verified": true
+      }
+    ],
+    "hidden_strengths": [],
+    "github_signals": null,
+    "reasoning": {
+      "recommendation": "pass",
+      "top_strengths": [],
+      "concerns": [],
+      "missing_information": [],
+      "confidence_band": "low",
+      "narrative": "Average profile."
+    },
+    "authenticity_index": {
+      "commit_consistency_score": "medium",
+      "readme_quality_score": "low",
+      "original_repo_ratio": 0.5,
+      "has_issue_participation": false,
+      "signal_note": "analysis pending"
+    },
+    "created_at": "2026-06-02T02:19:27.729257",
+    "processing_status": "completed",
+    "organization_id": "00000000-0000-0000-0000-000000000001",
+    "job_id": "00000000-0000-0000-0000-000000000001",
+    "education": [
+      {
+        "institution": "Tech University",
+        "degree": "Bachelor of Science",
+        "field_of_study": "Computer Science",
+        "graduation_year": 2018,
+        "verified": false
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Dev",
+        "duration_months": 12
+      }
+    ]
+  },
+  {
+    "id": "6da60a03-c220-4db1-a318-98852d6b49fc",
+    "name": "Candidate 10",
+    "github_username": "user10",
+    "recommendation": "review",
+    "resume_text": "Standard resume text.",
+    "extracted_skills": [
+      {
+        "skill_name": "Skill 0",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 1",
+        "confidence": "high",
+        "verified": true
+      },
+      {
+        "skill_name": "Skill 2",
+        "confidence": "high",
+        "verified": true
+      }
+    ],
+    "hidden_strengths": [],
+    "github_signals": null,
+    "reasoning": {
+      "recommendation": "pass",
+      "top_strengths": [],
+      "concerns": [],
+      "missing_information": [],
+      "confidence_band": "low",
+      "narrative": "Average profile."
+    },
+    "authenticity_index": {
+      "commit_consistency_score": "medium",
+      "readme_quality_score": "low",
+      "original_repo_ratio": 0.5,
+      "has_issue_participation": false,
+      "signal_note": "analysis pending"
+    },
+    "created_at": "2026-06-02T02:19:27.729265",
+    "processing_status": "completed",
+    "organization_id": "00000000-0000-0000-0000-000000000001",
+    "job_id": "00000000-0000-0000-0000-000000000001",
+    "education": [
+      {
+        "institution": "Tech University",
+        "degree": "Bachelor of Science",
+        "field_of_study": "Computer Science",
+        "graduation_year": 2018,
+        "verified": false
+      }
+    ],
+    "work_experience": [
+      {
+        "title": "Dev",
+        "duration_months": 12
+      }
+    ]
+  }
+]
