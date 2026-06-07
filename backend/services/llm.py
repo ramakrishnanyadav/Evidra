@@ -16,14 +16,26 @@ async def call_with_retry(func, *args, max_retries=3, **kwargs):
 
 logger = logging.getLogger(__name__)
 
-# Use Featherless API
-client = AsyncOpenAI(
-    api_key=settings.FEATHERLESS_API_KEY,
-    base_url="https://api.featherless.ai/v1"
-)
-
-# Recommended model for structured output
-MODEL = "Qwen/Qwen2.5-7B-Instruct"
+# Dynamically initialize OpenAI client based on available keys
+if settings.FEATHERLESS_API_KEY:
+    client = AsyncOpenAI(
+        api_key=settings.FEATHERLESS_API_KEY,
+        base_url="https://api.featherless.ai/v1"
+    )
+    MODEL = "Qwen/Qwen2.5-7B-Instruct"
+elif settings.GROQ_API_KEY:
+    client = AsyncOpenAI(
+        api_key=settings.GROQ_API_KEY,
+        base_url="https://api.groq.com/openai/v1"
+    )
+    MODEL = "llama3-70b-8192"
+else:
+    # Prevent boot crash if no keys are set, but calls will fail gracefully later
+    client = AsyncOpenAI(
+        api_key="dummy_key_to_prevent_boot_crash",
+        base_url="https://api.featherless.ai/v1"
+    )
+    MODEL = "Qwen/Qwen2.5-7B-Instruct"
 
 async def extract_resume_data(resume_text: str) -> dict:
     """Extracts candidate profile from resume text using Featherless API, with strict JSON enforcement."""
