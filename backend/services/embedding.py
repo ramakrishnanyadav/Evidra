@@ -6,16 +6,16 @@ import numpy as np
 # First load takes 5-10 seconds, subsequent calls are fast
 _model: SentenceTransformer | None = None
 
-def get_embedding_model() -> SentenceTransformer:
-    global _model
-    if _model is None:
-        _model = SentenceTransformer(settings.EMBEDDING_MODEL)
-    return _model
+def get_embedding_model():
+    # Return None to signify local model is disabled to prevent OOM
+    return None
 
 def generate_embedding(text: str) -> list[float]:
-    model = get_embedding_model()
-    embedding = model.encode(text, normalize_embeddings=True)
-    return embedding.tolist()
+    """
+    Returns a dummy zero-vector to prevent PyTorch from loading and 
+    crashing the free Render instance with an Out Of Memory (OOM) error.
+    """
+    return [0.0] * settings.EMBEDDING_DIMENSIONS
 
 def build_candidate_embedding_text(candidate_profile: dict) -> str:
     parts = []
