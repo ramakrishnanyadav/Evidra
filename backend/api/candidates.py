@@ -425,6 +425,9 @@ async def upload_candidate(
             
         dump['audit_trail'] = audit_trail
         
+        # CandidateRecord does not have total_experience_months in the database schema
+        dump.pop('total_experience_months', None)
+        
         record = CandidateRecord(**dump)
         session.add(record)
         await session.commit()
