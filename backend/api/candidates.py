@@ -291,6 +291,21 @@ async def upload_candidate(
     current_job: uuid.UUID = Depends(get_current_job)
 ):
     """Stage 1 & 2 of the resume pipeline."""
+    from models.db import JobRecord
+    
+    # Ensure the job exists to prevent foreign key violations
+    existing_job = await session.get(JobRecord, current_job)
+    if not existing_job:
+        new_job = JobRecord(
+            id=current_job,
+            organization_id=current_org,
+            title="Senior Backend Engineer",
+            description="Default Demo Job",
+            persona_default="startup_generalist"
+        )
+        session.add(new_job)
+        await session.commit()
+
     content = await file.read()
     filename = file.filename.lower() if file.filename else ""
     
