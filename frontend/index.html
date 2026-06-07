@@ -216,6 +216,45 @@
         </div>
     </div>
 </div>
+
+<!-- GitHub Enrichment Modal -->
+<div id="github-enrichment-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-[2000] hidden flex items-center justify-center p-4">
+    <div class="bg-surface border border-outline-variant rounded-xl w-full max-w-md overflow-hidden shadow-[0_0_50px_rgba(0,0,0,0.5)]">
+        <div class="px-6 py-4 border-b border-outline-variant flex justify-between items-center bg-surface-secondary/50">
+            <h3 class="text-white font-semibold text-sm tracking-widest uppercase font-mono flex items-center gap-2">
+                <span class="material-symbols-outlined text-primary text-[18px]">code_blocks</span>
+                GitHub Enrichment
+            </h3>
+            <button onclick="closeGithubModal()" class="text-on-surface-variant hover:text-white transition-colors">
+                <span class="material-symbols-outlined text-[20px]">close</span>
+            </button>
+        </div>
+        <div class="p-6">
+            <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+                Enter the candidate's GitHub username to force an intelligence audit. Leave blank to rely purely on Cognitive Extraction.
+            </p>
+            <div class="mb-6">
+                <label class="block text-[11px] font-medium text-on-surface-variant/70 uppercase tracking-wider mb-2 ml-1">GitHub Username or URL</label>
+                <input 
+                    type="text" 
+                    id="manual-github-input" 
+                    class="w-full bg-black/40 border border-outline-variant/60 rounded-xl px-4 py-3 text-sm text-white placeholder:text-on-surface-variant/30 focus:border-indigo-signal/60 focus:ring-1 focus:ring-indigo-signal/60 focus:bg-indigo-signal/5 transition-all outline-none" 
+                    placeholder="e.g. torvalds or github.com/torvalds"
+                />
+            </div>
+            
+            <div class="flex gap-3">
+                <button onclick="submitResumeUpload(false)" class="flex-1 bg-surface-secondary hover:bg-white/5 border border-outline-variant text-on-surface font-semibold rounded-xl py-3.5 text-sm transition-all text-center">
+                    SKIP
+                </button>
+                <button onclick="submitResumeUpload(true)" class="flex-1 bg-gradient-to-r from-primary to-indigo-500 hover:from-indigo-400 hover:to-indigo-500 text-white font-semibold rounded-xl py-3.5 text-sm shadow-[0_0_20px_rgba(108,136,255,0.3)] hover:shadow-[0_0_30px_rgba(108,136,255,0.5)] transition-all flex items-center justify-center gap-2">
+                    ENRICH <span class="material-symbols-outlined text-[18px]">bolt</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Top Operation Bar -->
 <div class="h-11 pt-5 bg-surface-secondary/50 border-b border-outline-variant flex items-center justify-between px-padding-lg font-mono text-[10px] uppercase tracking-[0.25em] text-on-surface-variant/20 z-50">
 <div class="flex items-center gap-16">
@@ -1349,18 +1388,29 @@ Select a candidate to view intelligence narrative.
             setState({ searchQuery: e.target.value });
         });
 
-        // Upload Resume Logic
-        document.getElementById('upload-resume').addEventListener('change', async (e) => {
-            if (!e.target.files.length) return;
-            const file = e.target.files[0];
+        let pendingFileForUpload = null;
+
+        function closeGithubModal() {
+            document.getElementById('github-enrichment-modal').classList.add('hidden');
+            document.getElementById('manual-github-input').value = '';
+            pendingFileForUpload = null;
+        }
+
+        async function submitResumeUpload(useGithub) {
+            if (!pendingFileForUpload) return;
+            
+            const file = pendingFileForUpload;
             const formData = new FormData();
             formData.append('file', file);
             
-            // Allow manual GitHub override for demo purposes if the resume lacks it
-            const manualGithub = prompt("Optional: Enter the candidate's GitHub username to force code enrichment (leave blank to rely purely on AI extraction from the PDF):");
-            if (manualGithub && manualGithub.trim() !== '') {
-                formData.append('github_username', manualGithub.trim());
+            if (useGithub) {
+                const manualGithub = document.getElementById('manual-github-input').value.trim();
+                if (manualGithub !== '') {
+                    formData.append('github_username', manualGithub);
+                }
             }
+            
+            closeGithubModal();
             
             const btnText = document.getElementById('upload-text');
             const originalText = btnText.textContent;
@@ -1395,8 +1445,16 @@ Select a candidate to view intelligence narrative.
                 alert('Upload error: Network issue or server unreachable.');
             } finally {
                 btnText.textContent = originalText;
-                e.target.value = ''; // Reset input
             }
+        }
+
+        // Upload Resume Logic
+        document.getElementById('upload-resume').addEventListener('change', (e) => {
+            if (!e.target.files.length) return;
+            pendingFileForUpload = e.target.files[0];
+            document.getElementById('github-enrichment-modal').classList.remove('hidden');
+            setTimeout(() => document.getElementById('manual-github-input').focus(), 100);
+            e.target.value = ''; // Reset input
         });
 
         // Navigation Tabs Logic

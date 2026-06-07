@@ -61,7 +61,7 @@ async def validation_exception_handler(request: Request, exc: RequestValidationE
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"], # Update with deployment URL later
-    allow_credentials=True,
+    allow_credentials=False, # Must be False when allow_origins is '*' to pass browser CORS validation
     allow_methods=["*"],
     allow_headers=["*"],
 )
