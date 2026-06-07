@@ -538,7 +538,9 @@ Select a candidate to view intelligence narrative.
 </aside>
 </div>
 <script>
-    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://127.0.0.1:8005' : 'https://evidra-3kk0.onrender.com';
+    // In production, we use Vercel's proxy (defined in vercel.json) to securely route traffic to Render.
+    // This hides the Render URL and prevents browser adblockers/CORS from blocking the backend connection.
+    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://127.0.0.1:8005' : '';
     const state = {
         candidates: [],
         selectedCandidateId: null,
@@ -1441,8 +1443,12 @@ Select a candidate to view intelligence narrative.
                     alert('Upload failed: ' + msg);
                 }
             } catch (err) {
-                console.error(err);
-                alert('Upload error: Network issue or server unreachable.');
+                console.error("Upload threw error:", err);
+                if (err.message === 'Unauthorized') {
+                    // Handled by handleUnauthorized
+                    return;
+                }
+                alert(`Upload error: ${err.message || 'Network issue or server unreachable.'}`);
             } finally {
                 btnText.textContent = originalText;
             }
