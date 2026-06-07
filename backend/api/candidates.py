@@ -365,8 +365,21 @@ async def upload_candidate(
             "github_username": final_github_username,
             "processing_status": "failed",
             "recommendation": "review",
-            "reasoning": {"confidence_band": "low", "narrative": f"Extraction failed: {str(e)}"},
-            "authenticity_index": {"signal_note": "Extraction failed, candidate needs manual review."}
+            "reasoning": {
+                "recommendation": "review",
+                "top_strengths": [],
+                "concerns": [],
+                "missing_information": ["Extraction failed"],
+                "confidence_band": "low", 
+                "narrative": "Extraction failed due to an API error. Please check your LLM API keys."
+            },
+            "authenticity_index": {
+                "original_repo_ratio": 0.0,
+                "commit_consistency_score": "low",
+                "readme_quality_score": "low",
+                "has_issue_participation": False,
+                "signal_note": "Extraction failed, candidate needs manual review."
+            }
         }
         audit_trail.append({"action": "Extraction Failed", "timestamp": datetime.utcnow().isoformat(), "details": str(e)})
     
