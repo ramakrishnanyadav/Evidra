@@ -24,11 +24,19 @@ if settings.FEATHERLESS_API_KEY:
     )
     MODEL = "Qwen/Qwen2.5-7B-Instruct"
 elif settings.GROQ_API_KEY:
-    client = AsyncOpenAI(
-        api_key=settings.GROQ_API_KEY,
-        base_url="https://api.groq.com/openai/v1"
-    )
-    MODEL = "llama3-70b-8192"
+    # If the user put a Featherless key into the GROQ_API_KEY env var
+    if not settings.GROQ_API_KEY.startswith("gsk_"):
+        client = AsyncOpenAI(
+            api_key=settings.GROQ_API_KEY,
+            base_url="https://api.featherless.ai/v1"
+        )
+        MODEL = "Qwen/Qwen2.5-7B-Instruct"
+    else:
+        client = AsyncOpenAI(
+            api_key=settings.GROQ_API_KEY,
+            base_url="https://api.groq.com/openai/v1"
+        )
+        MODEL = "llama3-70b-8192"
 else:
     # Prevent boot crash if no keys are set, but calls will fail gracefully later
     client = AsyncOpenAI(
