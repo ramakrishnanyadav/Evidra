@@ -499,7 +499,7 @@ Select a candidate to view intelligence narrative.
 </aside>
 </div>
 <script>
-    const API_BASE_URL = 'http://127.0.0.1:8005';
+    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://127.0.0.1:8005' : 'https://evidra-3kk0.onrender.com';
     const state = {
         candidates: [],
         selectedCandidateId: null,
