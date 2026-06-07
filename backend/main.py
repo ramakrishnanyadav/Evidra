@@ -20,9 +20,9 @@ async def lifespan(app: FastAPI):
     """Lifecycle manager for FastAPI app."""
     # Initialize the database
     await init_db()
-    # Preload embedding model to avoid cold start during first request
-    get_embedding_model()
-    print("Embedding model loaded and ready")
+    # Skip preloading embedding model to avoid Render port binding timeouts
+    # Model will be loaded on-demand during the first request
+    print("Database initialized, skipping model preload for fast boot")
     yield
 
 app = FastAPI(
