@@ -538,9 +538,9 @@ Select a candidate to view intelligence narrative.
 </aside>
 </div>
 <script>
-    // In production, we use Vercel's proxy (defined in vercel.json) to securely route traffic to Render.
-    // This hides the Render URL and prevents browser adblockers/CORS from blocking the backend connection.
-    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://127.0.0.1:8005' : '';
+    // We connect directly to Render because Vercel Proxy cannot handle streaming large file uploads (it throws 502 Bad Gateway).
+    // The previous CORS/Network errors were actually caused by a backend database crash masking the CORS headers. This is now fixed.
+    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' ? 'http://127.0.0.1:8005' : 'https://evidra-3kk0.onrender.com';
     const state = {
         candidates: [],
         selectedCandidateId: null,
