@@ -1390,13 +1390,13 @@ Select a candidate to view intelligence narrative.
 
         let pendingFileForUpload = null;
 
-        function closeGithubModal() {
+        window.closeGithubModal = function() {
             document.getElementById('github-enrichment-modal').classList.add('hidden');
             document.getElementById('manual-github-input').value = '';
             pendingFileForUpload = null;
-        }
+        };
 
-        async function submitResumeUpload(useGithub) {
+        window.submitResumeUpload = async function(useGithub) {
             if (!pendingFileForUpload) return;
             
             const file = pendingFileForUpload;
